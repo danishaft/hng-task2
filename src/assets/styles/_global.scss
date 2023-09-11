@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+//colors
+$primaryBlack: #000000;
+$primaryRed: #BE123C;
+$primaryWhite: #D1D5DB;
+$primaryWhiteLight: #E8E8E8;
+$primaryGrey: #9CA3AF;
+$primaryAsh: #666666;
+$primaryYellow: #FFA858;
+$secondaryRed: rgba(190, 18, 60, 0.1);
+$secondaryRedLighter: rgba(190, 18, 60, 0.7);
+$secondaryBlack: #111827;
+$secondaryBlackLight: #404040;
+$secondaryBlackLighter: #333333;
+$secondaryWhite: #F3F4F6;
+
+//font sizes
+@mixin text-xs{
+    font-size: clamp(.5rem, 1vw, .75rem );
+    line-height: 1rem;
+}
+@mixin text-sm{
+    font-size: clamp(.6rem, 1vw, .875rem );
+    line-height: 1.25rem;
+}
+@mixin text-base{
+    font-size: clamp(.7rem, 1.1vw, 1rem);
+    line-height: 1.5rem;
+}
+@mixin text-lg{
+    font-size: clamp(.85rem, 1.3vw, 1.125rem);
+    line-height: 1.75rem;
+}
+@mixin text-xl{
+    font-size: clamp(.9rem, 1.5vw, 1.25rem);
+    line-height: 1.75rem;
+}
+@mixin text-2xl{
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 2rem;
+}
+@mixin text-3xl{
+    font-size: clamp(1.3rem, 2.5vw, 1.875rem);
+    line-height: 2.25rem;
+}
+@mixin text-4xl{
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    line-height: 2.5rem;
+}
+@mixin text-5xl{
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    line-height: 3rem;
+}
+@mixin text-6xl{
+    font-size: clamp(2.1rem, 5vw, 3.75rem);
+    line-height: 3.75rem;
+}
+@mixin text-7xl{
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 4.5rem;
+}
+@mixin text-8xl{
+    font-size: clamp(3.3rem, 7vw, 6rem);
+    line-height: 6rem;
+}
+@mixin text-9xl{
+    font-size: clamp(4rem, 7vw, 8rem);
+    line-height: 8rem;
+}
