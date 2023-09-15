@@ -1,0 +1,27 @@
+@use "../../assets/styles/styles.scss" as g;
+.top__movies{
+    max-width: 70em;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4em;
+    margin-bottom: 3em;
+}
+.top__movies .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top__movies .row .title {
+    font-weight: bold;
+    @include g.text-4xl;
+}
+.top__movies .row .see__more{
+    font-weight: lighter;
+}
+.top__movies .movie__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+    // justify-content: center;
+}

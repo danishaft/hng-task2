@@ -1,0 +1,8 @@
+@use "../../assets/styles/styles.scss";
+.hero__sec{
+    background: url('../../assets/images/Poster.png');
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffff;
+}

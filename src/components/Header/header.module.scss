@@ -1,0 +1,104 @@
+@use "../../assets/styles/styles.scss" as g;
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    max-width: 80em;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    // background: red;
+}
+.logo{
+    max-width: 30em;
+    width: 30%;
+    // background: peru;
+}
+.input__container{
+    display: none;
+}
+.input__container input{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid #ffff;
+    border-radius: .4em;
+    color: #ffff;
+    padding: .3em .7em;
+}
+::placeholder{
+    color: #ffff;
+    @include g.text-sm;
+}
+.input__container .icon{
+    // background: red;
+    width: fit-content;
+    justify-self: flex-end;
+    border-radius: 0 .4em .4em 0;
+    display:flex;
+    align-items: center;
+    padding-right: .7em;
+}
+.input__container > *{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    place-items: center;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    max-width: 20em;
+    width: 9%;
+    justify-content: flex-end;
+}
+.nav img{
+    width: 100%;
+    max-width: 1.8em;
+    cursor: pointer;
+}
+.nav p{
+    display: none;
+}
+.mobile__nav{
+    display: flex;
+    max-width: 40em;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    display: none;
+}
+.mobile__nav .input__container{
+    display: grid;
+    width: 50%;
+}
+
+
+//responsive breakpoints
+@include g.tablet{
+    .nav p{
+        display: block;
+    }
+    .desktop__nav{
+        max-width: 60em;
+        width: 38%;
+    }
+    .input__container{
+        display: grid;
+        width: 100%;
+    }
+    .nav{
+        width: fit-content;
+    }
+    .nav img{
+        pointer-events: none;
+    }
+    .mobile__nav{
+        display: none;
+    }
+}

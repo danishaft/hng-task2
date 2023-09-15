@@ -1,0 +1,59 @@
+@use "../../assets/styles/styles.scss" as g;
+.movie .img{
+    display: grid;
+}
+.movie .img > * {
+    grid-area: 1 / 2 ;
+}
+.movie .img img{
+    aspect-ratio: 1/1.1;
+}
+.movie .img .likeBtn{
+    background: rgba(243, 244, 246, 0.5);
+    color: g.$primaryWhite;
+    width: 1.7em;
+    height: 1.7em;
+    justify-self: flex-end;
+    margin: 1em 1em 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.movie .img .likeBtn:hover{
+    background: rgba(190, 18, 61, 0.304);
+    color: g.$primaryRed;
+}
+a{
+    text-decoration: none;
+}
+
+.movie .movie__content .country{
+    color: g.$primaryGrey;
+    @include g.text-sm;
+    margin: .7em 0;
+    display: flex;
+}
+
+.movie .movie__content .title{
+    color: #111827;
+    @include g.text-lg;
+}
+.movie .movie__content .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include g.text-sm;
+    margin: .5em 0;
+    color: g.$secondaryBlack;
+}
+.movie__content .row div{
+    display: flex;
+    align-items: center;
+    gap: .7em;
+}
+.movie__content .categories{
+    color: g.$primaryGrey;
+    @include g.text-sm;
+    font-weight: 500;
+}

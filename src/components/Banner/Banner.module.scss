@@ -1,0 +1,51 @@
+@use "../../assets/styles/styles.scss" as g;
+.banner{
+    padding: 2em 0;
+    max-width: 80em;
+    width: 80%;
+    margin: 0 auto;
+}
+.banner__text{
+    width: 60%;
+    max-width: 30em;
+}
+.banner h1{
+    @include g.text-5xl;
+    letter-spacing: .05em;
+    margin-bottom: .3em;
+}
+.banner p{
+    @include g.text-base;
+    margin-bottom: 1em;
+}
+.watch__btn{
+    background: g.$primaryRed;
+    text-decoration: none;
+    color: #ffff;
+    text-transform: uppercase;
+    padding: .7em 1.3em;
+    font-weight: bold;
+    @include g.text-base;
+    border-radius: .5rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 68%;
+}
+.row div{
+    display: flex;
+    align-items: start;
+    gap: .7em
+}
+.row div p{
+    @include g.text-sm;
+}
+.row img{
+    display: block;
+    object-fit: contain;
+}

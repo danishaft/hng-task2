@@ -1,0 +1,284 @@
+@use "../../assets/styles/styles.scss" as g;
+aside{
+    border: 1px solid g.$primaryWhite;
+    width: 20%;
+    max-width: 20em;
+    border-radius: 0 1em 1em 0;
+    position: fixed;
+    height: 100vh;
+    background: #ffff;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+aside .logo{
+    width: 50%;
+    max-width: 4rem;
+    margin-left: 1em;
+    color: g.$primaryBlack;
+}
+nav{
+    margin-left: .5em;
+}
+nav ul{
+    // background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // width: fit-content;
+    list-style: none;
+    padding: 0;
+    gap: 2em;
+}
+nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7em;
+    @include g.text-base;
+}
+aside p{
+    display: none;
+}
+aside .logOut{
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7em;
+    @include g.text-base;
+}
+.movie__details{
+    // margin: 1em 0;
+    padding: 1em;
+    width: 80%;
+    margin-left: auto;
+}
+.movie__details .video{
+    display: grid;
+    place-items: center;
+}
+.movie__details .video > *{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.movie__details .video img{
+    aspect-ratio: 4/2.5;
+    object-fit: cover;
+    border-radius: .7em;
+}
+.movie__details .video .play{
+    display: block;
+    background: rgba(243, 244, 246, 0.5);
+    color: #ffff;
+    padding:.7rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    @include g.text-5xl
+}
+.movie__details .row1{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 1em;
+    margin: 1em 0;
+}
+.movie__details .row1 .title{
+    @include g.text-2xl;
+    color: g.$secondaryBlackLight;
+    display: flex;
+    gap: .2em;
+}
+.row1 .genres{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0 .6em;
+}
+.row1 .genres .genre{
+    border: 0.5px solid g.$secondaryRed;
+    color: g.$primaryRed;
+    border-radius: 1em;
+    padding: .1em .5em;
+    @include g.text-sm;
+    font-weight: bold;
+    
+}
+.row1 .rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: g.$secondaryBlackLight;
+    @include g.text-xl;
+}
+.row1 .rating .star{
+    color: g.$primaryYellow;
+    @include g.text-lg;
+}
+
+.movie__details .col1 .overview{
+    @include g.text-base;
+    margin-bottom: 1em;
+}
+.movie__details .col1 p{
+    @include g.text-base;
+    margin-bottom: 1em;
+}
+.red{
+    color: g.$primaryRed;
+}
+.movie__details .col1 .btn__group{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.col1 .btn__group .topRated__btn{
+    background: g.$primaryRed;
+    color: #ffff;
+    padding: .5em 1em;
+    @include g.text-base;
+    border-radius: .5em;
+}
+.col1 .btn__group .award__btn{
+    border: 1px solid g.$primaryWhite;
+    padding: .5em 1em;
+    @include g.text-base;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5em;
+    width: 60%;
+    max-width: 60em;
+}
+.movie__details .col2 .btn__group{
+    width: 100%;
+    margin-bottom: .8em;
+    display: flex;
+    flex-direction: column;
+    gap: .4em;
+}
+.col2 .btn__group button{
+    border-radius: .4em;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include g.text-base;
+    padding: .5em 0;
+    border: 1px solid g.$primaryRed;
+    background: g.$secondaryRed;
+    color: g.$secondaryBlackLight;
+}
+.col2 .btn__group button:first-child{
+    background: g.$primaryRed;
+    color: #fff;
+    border: none;
+}
+.col2 .movie__collection{
+    display: grid;
+    // place-content: center;
+}
+.col2 .movie__collection > * {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 100%;
+}
+.col2 .movie__collection img {
+    width: 100%;
+}
+.col2 .movie__collection .text{
+    background: rgba(18, 18, 18, 0.5);
+    height: fit-content;
+    align-self: flex-end;
+    @include g.text-sm;
+    padding: .5em 1em;
+    border-radius: 0 0 1em 1em;
+    color: #ffff;
+}
+.col2 .movie__collection .text p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//responsive breakpoints
+@include g.tablet{
+    aside{
+        padding: 1em 0;
+        gap: 2em;
+    }
+    aside p{
+        display: block;
+    }
+    nav ul{
+        align-items: start;
+        padding: 0 0 0 1em;
+    }
+    aside .logOut{
+        margin-top: 0;
+    }
+    .movie__details{
+        width: 77%;
+    }
+    .movie__details .video{
+        width: 100%;
+    }
+    .movie__details .video img{
+        width: 100%;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        font-size: clamp(.8rem, 5vw, 1.2rem);
+        gap: .2em;
+    }
+    .logo img{
+        width: 50%;
+        max-width: 50rem;
+    }
+}
+
+@include g.desktop{
+    .row2{
+        display: flex;
+        gap: 1em;
+        width: 100%;
+    }
+    .row2 .col1{
+        width: 70%;
+    }
+    .row2 .col2{
+        width: 30%;
+    }
+    aside .logo{
+        margin-left: 2.5em;
+    }
+    nav{
+        margin-left: 2.5em;
+    }
+    .genres{
+        margin-right: auto;
+    }
+    aside{
+        padding: 2em 0;
+        gap: 2em;
+    }
+    .movie__details .video img{
+        aspect-ratio: 4/2;
+    }
+}
+@include g.monitor{
+    aside{
+        width: 17%;
+    }
+    .movie__details .video img{
+        aspect-ratio: 4/1.5;
+    }
+}

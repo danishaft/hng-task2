@@ -1,0 +1,37 @@
+@use "../../assets/styles/styles.scss" as g;
+.box{
+    border: 1px solid g.$primaryRed;
+    background: rgba(190, 18, 61, 0.073);
+    padding:  1em .7em;
+    text-wrap: wrap;
+    border-radius: 1em;
+    display: none;
+    margin: 0 1em;
+    margin-top: auto;
+}
+.box .first{
+    @include g.text-sm;
+    margin-bottom: .2em;
+}
+.box .second{
+    @include g.text-xs;
+    margin-bottom: .4em;
+}
+.box span{
+    background: rgba(190, 18, 61, 0.1);
+    color: g.$primaryRed;
+    @include g.text-xs;
+    padding: .3em 1em;
+    border-radius: 1em;
+}
+//responsive breakpoints
+@include g.tablet{
+    .box{
+        display: block;
+    }
+}
+@include g.desktop{
+    .box{
+        margin: 0 2.5em;
+    }
+}
