@@ -41,7 +41,6 @@ function MovieContext({children}: {children: ReactNode}) {
           fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
             .then(response => response.json())
             .then(response => {
-                // console.log(response.results.slice(0, 10))
                 const data = response.results.slice(0, 10).map((res) => ({
                     id: res.id,
                     title: res.title,
