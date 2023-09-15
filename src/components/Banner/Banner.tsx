@@ -19,7 +19,7 @@ function Banner() {
               <p className={styles.percentage}>89%</p>
             </div>
           </div>
-        <div className={styles.watch__btn} href="#"><AiFillPlayCircle/>WATCH Trailer</div>   
+        <div className={styles.watch__btn} ><AiFillPlayCircle/>WATCH Trailer</div>   
        </div>
     </div>
   )

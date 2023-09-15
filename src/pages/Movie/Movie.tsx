@@ -29,10 +29,10 @@ interface MovieDetails{
 function Movie() {
   const {id} = useParams()
   const [movieDetails , setMovie] = useState<MovieDetails>()
-  const getRating = (rate, count) => {
+  const getRating = (rate: number, count: number) => {
     return `${rate.toFixed(1)}|${count.toString().slice(0, 3)}k`
   }
-  const genres = movieDetails?.genre.map((item: object) => {
+  const genres = movieDetails?.genre.map((item: {id: number; name: string;}) => {
     return <span className={styles.genre} key={item.id}>{item.name}</span>
   })
   useEffect(()=>{
@@ -47,7 +47,7 @@ function Movie() {
       fetch(`https://api.themoviedb.org/3/movie/${id}`, options)
         .then(response => response.json())
         .then(response => {
-          console.log(response)
+          console.log(response[0])
           setMovie( {
               poster: response.poster_path,
               title: response.title,

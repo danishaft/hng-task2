@@ -14,7 +14,7 @@ export default function Header() {
             display:'none'
         }
     }
-    const updateStyles = (mediaQuery) => {
+    const updateStyles = (mediaQuery: {matches: boolean;}) => {
         if(mediaQuery.matches){
             setOpened(false);
         }
