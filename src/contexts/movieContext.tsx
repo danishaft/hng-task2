@@ -1,5 +1,8 @@
 import { createContext, useContext, useState, useEffect, ReactNode} from "react"
 interface Movie {
+    rating: number;
+    poster: string;
+    date: string;
     poster_path: string;
     id: number;
     title: string;
